@@ -1,0 +1,8 @@
+nicegui
+selenium
+pandas
+python-dotenv
+openpyxl
+SpeechRecognition
+requests
+openai

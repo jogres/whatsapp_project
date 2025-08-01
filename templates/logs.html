@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><title>Logs</title></head>
+<body>
+  <h1>Logs em tempo real</h1>
+  <pre id="log-output" style="white-space: pre-wrap; height:80vh; overflow:y-scroll;"></pre>
+  <script>
+    const src = new EventSource("/stream_logs");
+    src.onmessage = e => {
+      document.getElementById("log-output").textContent += e.data + "\n";
+    };
+  </script>
+  <p><a href="/dashboard">Voltar</a></p>
+</body>
+</html>
