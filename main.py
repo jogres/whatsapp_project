@@ -4,6 +4,8 @@ import threading
 from nicegui import ui
 from dotenv import load_dotenv
 
+
+
 load_dotenv()
 LOG = 'data/system.log'
 os.makedirs('data', exist_ok=True)
@@ -68,4 +70,5 @@ def main_page():
     log_widget = ui.log(max_lines=200).classes('w-full h-96')
     ui.timer(1.0, lambda: log_widget.set(open(LOG).read().splitlines()[-200:]))
 
-ui.run(title='Bot WhatsApp', host='0.0.0.0', port=5000)
+ui.run(title='Bot WhatsApp', host='0.0.0.0', port=8080)
+
