@@ -2,3 +2,5 @@
 [sender] Erro ao enviar para wesley: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
 [sender] Erro ao enviar para wesley: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
 [sender] Erro ao enviar para brenda: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+Usando endpoint: https://api.openai.com/v1/chat/completions
+AVISO: O arquivo received_log.csv está vazio. Nenhuma mensagem para processar.

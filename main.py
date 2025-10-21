@@ -25,9 +25,14 @@ def run_script(script, message=None, link=None):
             env['MSG_TEMPLATE'] = message
         if link is not None:
             env['MSG_LINK'] = link
+        
+        # Abrir logs com encoding UTF-8
+        stdout_file = open(LOG, 'a', encoding='utf-8')
+        stderr_file = open(LOG, 'a', encoding='utf-8')
+        
         proc = subprocess.Popen(['python', script],
-                                stdout=open(LOG, 'a'),
-                                stderr=open(LOG, 'a'),
+                                stdout=stdout_file,
+                                stderr=stderr_file,
                                 env=env)
         ui.notify(f'🤖 Rodando {script}', position='top')
 
@@ -68,7 +73,16 @@ def main_page():
 
     ui.separator()
     log_widget = ui.log(max_lines=200).classes('w-full h-96')
-    ui.timer(1.0, lambda: log_widget.set(open(LOG).read().splitlines()[-200:]))
+    
+    def update_log():
+        try:
+            with open(LOG, 'r', encoding='utf-8') as f:
+                lines = f.read().splitlines()[-200:]
+                log_widget.set(lines)
+        except Exception as e:
+            log_widget.set([f"Erro ao ler log: {e}"])
+    
+    ui.timer(1.0, update_log)
 
 ui.run(title='Bot WhatsApp', host='0.0.0.0', port=8080)
 
