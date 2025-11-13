@@ -4,3 +4,1304 @@
 [sender] Erro ao enviar para brenda: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
 Usando endpoint: https://api.openai.com/v1/chat/completions
 AVISO: O arquivo received_log.csv est� vazio. Nenhuma mensagem para processar.
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 303, in <module>
+    wait.until(EC.presence_of_element_located((By.XPATH, "//div[@id='main']/footer")))
+    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\support\wait.py", line 138, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e19aa235
+	0x7ff6e1702650
+	0x7ff6e14916dd
+	0x7ff6e14ea27e
+	0x7ff6e14ea58c
+	0x7ff6e153ed77
+	0x7ff6e153baba
+	0x7ff6e14db0ed
+	0x7ff6e14dbf63
+	0x7ff6e19d5d60
+	0x7ff6e19cfe8a
+	0x7ff6e19f1005
+	0x7ff6e171d73e
+	0x7ff6e1724e3f
+	0x7ff6e170b7e4
+	0x7ff6e170b99f
+	0x7ff6e16f1908
+	0x7ffc496fe8d7
+	0x7ffc4adac53c
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 336, in <module>
+    print(f"\u274c Erro ao enviar para {nome}: {ex}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 322, in <module>
+    print(f"\u2705 Mensagem enviada para: {nome}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 336, in <module>
+    print(f"\u274c Erro ao enviar para {nome}: {ex}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\listener_transcriber.py", line 320, in <module>
+    print("\U0001f3a7 Listener e Transcriber iniciado!")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f3a7' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\listener_transcriber.py", line 336, in <module>
+    print(f"\n\u274c Erro no listener_transcriber: {e}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 2: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\listener_transcriber.py", line 340, in <module>
+    print("\n\U0001f6d1 Encerrando...")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f6d1' in position 2: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 481, in <module>
+    print(f"\u2705 Mensagem enviada para: {nome}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 495, in <module>
+    print(f"\u274c Erro ao enviar para {nome}: {ex}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 622, in <module>
+    print(f"\u2705 Mensagem enviada para: {nome}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 636, in <module>
+    print(f"\u274c Erro ao enviar para {nome}: {ex}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 622, in <module>
+    print(f"\u2705 Mensagem enviada para: {nome}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 636, in <module>
+    print(f"\u274c Erro ao enviar para {nome}: {ex}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 161, in <module>
+    print(f"\u2705 Mensagem enviada para: {nome}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2705' in position 0: character maps to <undefined>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 174, in <module>
+    print(f"\u274c Erro ao enviar para {nome}: {ex}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 43, in <module>
+    print(f"\U0001f4f1 Modo port�vel: usando perfil tempor�rio (ser� removido ao final)")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f1' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 43, in <module>
+    print(f"\U0001f4f1 Modo port�vel: usando perfil tempor�rio (ser� removido ao final)")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f1' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 43, in <module>
+    print(f"\U0001f4f1 Modo port�vel: usando perfil tempor�rio (ser� removido ao final)")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f1' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 48, in <module>
+    print(f"\U0001f4be Modo com perfil: usando perfil persistente em {PROFILE}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4be' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 48, in <module>
+    print(f"\U0001f4be Modo com perfil: usando perfil persistente em {PROFILE}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4be' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 48, in <module>
+    print(f"\U0001f4be Modo com perfil: usando perfil persistente em {PROFILE}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4be' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 48, in <module>
+    print(f"\U0001f4be Modo com perfil: usando perfil persistente em {PROFILE}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4be' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 43, in <module>
+    print(f"\U0001f4f1 Modo port�vel: usando perfil tempor�rio (ser� removido ao final)")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\U0001f4f1' in position 0: character maps to <undefined>
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 124, in <module>
+    time.sleep(2)
+    ~~~~~~~~~~^^^
+KeyboardInterrupt
+======================================
+[IMPORTANTE] Você precisa fazer login no WhatsApp Web agora!
+   1. Escaneie o QR Code que apareceu na tela
+   2. Aguarde o WhatsApp carregar completamente
+   3. O sistema aguardará 30 segundos para você fazer login
+============================================================
+
+[AGUARDANDO] Verificando se está logado...
+[AGUARDANDO] Login... (10s/120s)
+[AGUARDANDO] Login... (20s/120s)
+[AGUARDANDO] Login... (30s/120s)
+[MODO PORTAVEL] Usando perfil temporario (sera removido ao final)
+
+============================================================
+[MODO PORTAVEL ATIVADO]
+============================================================
+[IMPORTANTE] Você precisa fazer login no WhatsApp Web agora!
+   1. Escaneie o QR Code que apareceu na tela
+   2. Aguarde o WhatsApp carregar completamente
+   3. O sistema aguardará 30 segundos para você fazer login
+============================================================
+
+[AGUARDANDO] Verificando se está logado...
+[AGUARDANDO] Login... (10s/120s)
+[AGUARDANDO] Login... (20s/120s)
+[AGUARDANDO] Login... (30s/120s)
+[AGUARDANDO] Login... (40s/120s)
+[AGUARDANDO] Login... (50s/120s)
+[AGUARDANDO] Login... (60s/120s)
+[AGUARDANDO] Login... (70s/120s)
+[AGUARDANDO] Login... (80s/120s)
+[AGUARDANDO] Login... (90s/120s)
+[AGUARDANDO] Login... (100s/120s)
+[AGUARDANDO] Login... (110s/120s)
+[AGUARDANDO] Login... (120s/120s)
+[ERRO] Não foi possível detectar login no WhatsApp Web!
+   Por favor, faça login manualmente e tente novamente.
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 170, in <module>
+    except Exception as e:
+    ^^^^^^^^^^^^^
+KeyboardInterrupt
+=============================
+[IMPORTANTE] Você precisa fazer login no WhatsApp Web agora!
+   1. Escaneie o QR Code que apareceu na tela
+   2. Aguarde o WhatsApp carregar completamente
+   3. O sistema aguardará 30 segundos para você fazer login
+============================================================
+
+[AGUARDANDO] Verificando se está logado...
+[AGUARDANDO] Aguardando login... (15s/180s)
+[INFO] Certifique-se de que:
+   1. Escaneou o QR Code com seu WhatsApp
+   2. O WhatsApp Web está completamente carregado
+   3. Você pode ver a lista de conversas
+[AGUARDANDO] Aguardando login... (30s/180s)
+[INFO] Certifique-se de que:
+   1. Escaneou o QR Code com seu WhatsApp
+   2. O WhatsApp Web está completamente carregado
+   3. Você pode ver a lista de conversas
+[AGUARDANDO] Aguardando login... (45s/180s)
+[INFO] Certifique-se de que:
+   1. Escaneou o QR Code com seu WhatsApp
+   2. O WhatsApp Web está completamente carregado
+   3. Você pode ver a lista de conversas
+[AGUARDANDO] Aguardando login... (60s/180s)
+[INFO] Certifique-se de que:
+   1. Escaneou o QR Code com seu WhatsApp
+   2. O WhatsApp Web está completamente carregado
+   3. Você pode ver a lista de conversas
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 207, in <module>
+    time.sleep(3)
+    ~~~~~~~~~~^^^
+KeyboardInterrupt
+======================================
+[IMPORTANTE] Você precisa fazer login no WhatsApp Web agora!
+   1. Escaneie o QR Code que apareceu na tela
+   2. Aguarde o WhatsApp carregar completamente
+   3. O sistema aguardará 30 segundos para você fazer login
+============================================================
+
+[AGUARDANDO] Verificando se está logado...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[AGUARDANDO] Verificando login... (15s)
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[MODO PERSISTENTE] Usando perfil em C:\Users\manin\Downloads\whatsapp_project\profile
+[AGUARDANDO] 15 segundos para login no WhatsApp Web...
+Encontrados 1 contatos para processar
+Template de mensagem: Olá {nome}, tudo bem?
+
+[1/1] Enviando para: wesley (5555991754295)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5555991754295
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá wesley, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá wesley, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: wesley
+
+============================================================
+[CONCLUIDO]
+   Enviados: 1
+   Erros: 0
+   Total: 1
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 482, in <module>
+    sucesso_envio = enviar_texto(driver, wait, msg)
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 306, in enviar_texto
+    time.sleep(0.3)
+    ~~~~~~~~~~^^^^^
+KeyboardInterrupt
+la
+   2. Aguarde o WhatsApp carregar completamente
+   3. O sistema aguardará 30 segundos para você fazer login
+============================================================
+
+[AGUARDANDO] Verificando se está logado...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[AGUARDANDO] Verificando login... (15s)
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[AGUARDANDO] Verificando login... (30s)
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[AGUARDANDO] Verificando login... (45s)
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[DEBUG] QR code encontrado com seletor: //div[contains(@class, 'qr')]...
+[AGUARDANDO] Verificando login... (60s)
+[AVISO] Não foi possível detectar login automaticamente.
+[INFO] Verificando se há QR code visível...
+[OK] QR code não encontrado. Assumindo que está logado.
+[INFO] Continuando com o envio...
+Encontrados 1 contatos para processar
+Template de mensagem: Olá {nome}, tudo bem?
+
+[1/1] Enviando para: wesley (5555991754295)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5555991754295
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá wesley, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[MODO PERSISTENTE] Usando perfil em C:\Users\manin\Downloads\whatsapp_project\profile
+[AGUARDANDO] 15 segundos para login no WhatsApp Web...
+Encontrados 1 contatos para processar
+Template de mensagem: Olá {nome}, tudo bem?
+
+[1/1] Enviando para: wesley (5555991754295)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5555991754295
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá wesley, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá wesley, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: wesley
+
+============================================================
+[CONCLUIDO]
+   Enviados: 1
+   Erros: 0
+   Total: 1
+============================================================
+Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 89, in <module>
+    time.sleep(30)  # Mais tempo para login manual
+    ~~~~~~~~~~^^^^
+KeyboardInterrupt
+=====
+[IMPORTANTE] Você precisa fazer login no WhatsApp Web agora!
+   1. Escaneie o QR Code que apareceu na tela
+   2. Aguarde o WhatsApp carregar completamente
+   3. O sistema aguardará 30 segundos para você fazer login
+============================================================
+
+[MODO PORTAVEL] Usando perfil temporario (sera removido ao final)
+
+[MODO PORTAVEL] Aguardando 20 segundos para você fazer login...
+[INFO] Escaneie o QR Code se necessário e aguarde o WhatsApp carregar.
+[OK] Continuando com os envios...
+Encontrados 1 contatos para processar
+Template de mensagem: Olá {nome}, tudo bem?
+
+[1/1] Enviando para: wesley (5555991754295)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5555991754295
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá wesley, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá wesley, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: wesley
+
+============================================================
+[CONCLUIDO]
+   Enviados: 1
+   Erros: 0
+   Total: 1
+============================================================
+[LIMPEZA] Removendo perfil temporario...
+[OK] Perfil temporario removido
+[MODO PORTAVEL] Usando perfil temporario (sera removido ao final)
+
+[MODO PORTAVEL] Aguardando 20 segundos para você fazer login...
+[INFO] Escaneie o QR Code se necessário e aguarde o WhatsApp carregar.
+[OK] Continuando com os envios...
+Encontrados 25 contatos para processar
+Template de mensagem: Olá {nome}, tudo bem?
+
+[1/25] Enviando para: Roney (5538999136522)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5538999136522
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Roney, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Roney, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Roney
+
+[2/25] Enviando para: Junia (5538999652307)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5538999652307
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Junia, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Junia, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Junia
+
+[3/25] Enviando para: Jose (5538997252881)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5538997252881
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Jose, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Jose, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Jose
+
+[4/25] Enviando para: Dilsa (5527997423052)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5527997423052
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Dilsa, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Dilsa, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Dilsa
+
+[5/25] Enviando para: Erodino (5531998163462)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5531998163462
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Erodino, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Erodino, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Erodino
+
+[6/25] Enviando para: Lucas Gonçalves (5538998014511)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5538998014511
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Lucas Gonçalves, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Lucas Gonçalves, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Lucas Gonçalves
+
+[7/25] Enviando para: Graciele Mendes (553399178474)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=553399178474
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Graciele Mendes, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Graciele Mendes, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Graciele Mendes
+
+[8/25] Enviando para: Karine Alves (553391226412)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=553391226412
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Karine Alves, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Karine Alves, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Karine Alves
+
+[9/25] Enviando para: Claudia (553791358271)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=553791358271
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Claudia, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Claudia, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Claudia
+
+[10/25] Enviando para: Lihh (553891193084)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=553891193084
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Lihh, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Lihh, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Lihh
+
+[11/25] Enviando para: Kah (553399979780)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=553399979780
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Kah, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Kah, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Kah
+
+[12/25] Enviando para: Joana Melo (554699220491)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554699220491
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Joana Melo, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Joana Melo, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Joana Melo
+
+[13/25] Enviando para: Mary Lopes (553391777290)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=553391777290
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Mary Lopes, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Mary Lopes, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Mary Lopes
+
+[14/25] Enviando para: Sandra Aparecida (553391985085)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=553391985085
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Sandra Aparecida, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Sandra Aparecida, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Sandra Aparecida
+
+[15/25] Enviando para: Joana Melo (554699220491)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554699220491
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Joana Melo, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Joana Melo, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Joana Melo
+
+[16/25] Enviando para: gisele (554688048737)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554688048737
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá gisele, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá gisele, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: gisele
+
+[17/25] Enviando para: Cristiane (5512987118163)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5512987118163
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Cristiane, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Cristiane, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Cristiane
+
+[18/25] Enviando para: Rosa Maria de Vasconcelos (554699335488)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554699335488
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Rosa Maria de Vasconcelos, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Rosa Maria de Vasconcelos, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Rosa Maria de Vasconcelos
+
+[19/25] Enviando para: Castilho (5512991241926)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5512991241926
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Castilho, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Castilho, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Castilho
+
+[20/25] Enviando para: Mariluz Melo (554691052697)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554691052697
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Mariluz Melo, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Mariluz Melo, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Mariluz Melo
+
+[21/25] Enviando para: Zenadio (5518138973789)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=5518138973789
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[ERRO] Timeout ao abrir chat para Zenadio. Verifique se o número está correto.
+[DEBUG] Erro: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e19aa235
+	0x7ff6e1702650
+	0x7ff6e14916dd
+	0x7ff6e14ea27e
+	0x7ff6e14ea58c
+	0x7ff6e153ed77
+	0x7ff6e153baba
+	0x7ff6e14db0ed
+	0x7ff6e14dbf63
+	0x7ff6e19d5d60
+	0x7ff6e19cfe8a
+	0x7ff6e19f1005
+	0x7ff6e171d73e
+	0x7ff6e1724e3f
+	0x7ff6e170b7e4
+	0x7ff6e170b99f
+	0x7ff6e16f1908
+	0x7ffc496fe8d7
+	0x7ffc4adac53c
+
+
+[22/25] Enviando para: Giovanna Letícia (554699237139)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554699237139
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Giovanna Letícia, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Giovanna Letícia, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Giovanna Letícia
+
+[23/25] Enviando para: cido (554699843552)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554699843552
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá cido, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá cido, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: cido
+
+[24/25] Enviando para: Edna (551299779497)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=551299779497
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[ERRO] Timeout ao abrir chat para Edna. Verifique se o número está correto.
+[DEBUG] Erro: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e19aa235
+	0x7ff6e1702650
+	0x7ff6e14916dd
+	0x7ff6e14ea27e
+	0x7ff6e14ea58c
+	0x7ff6e153ed77
+	0x7ff6e153baba
+	0x7ff6e14db0ed
+	0x7ff6e14dbf63
+	0x7ff6e19d5d60
+	0x7ff6e19cfe8a
+	0x7ff6e19f1005
+	0x7ff6e171d73e
+	0x7ff6e1724e3f
+	0x7ff6e170b7e4
+	0x7ff6e170b99f
+	0x7ff6e16f1908
+	0x7ffc496fe8d7
+	0x7ffc4adac53c
+
+
+[25/25] Enviando para: Cleonice (555481546000)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=555481546000
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Cleonice, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Cleonice, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Cleonice
+
+============================================================
+[CONCLUIDO]
+   Enviados: 23
+   Erros: 2
+   Total: 25
+============================================================
+[LIMPEZA] Removendo perfil temporario...
+[OK] Perfil temporario removido
+[MODO PORTAVEL] Usando perfil temporario (sera removido ao final)
+
+[MODO PORTAVEL] Aguardando 20 segundos para você fazer login...
+[INFO] Escaneie o QR Code se necessário e aguarde o WhatsApp carregar.
+[OK] Continuando com os envios...
+Encontrados 24 contatos para processar
+Template de mensagem: Olá {nome}, tudo bem?
+
+[1/24] Enviando para: Lucas (553899529282)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=553899529282
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Lucas, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Lucas, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Lucas
+
+[2/24] Enviando para: Rosana (551296746314)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=551296746314
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Rosana, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Rosana, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Rosana
+
+[3/24] Enviando para: Regiane (554691261928)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554691261928
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Regiane, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Regiane, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Regiane
+
+[4/24] Enviando para: Pedro (554699864452)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554699864452
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Pedro, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Pedro, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Pedro
+
+[5/24] Enviando para: Maycol (551299196935)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=551299196935
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[ERRO] Timeout ao abrir chat para Maycol. Verifique se o número está correto.
+[DEBUG] Erro: Message: 
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e19aa235
+	0x7ff6e1702650
+	0x7ff6e14916dd
+	0x7ff6e14ea27e
+	0x7ff6e14ea58c
+	0x7ff6e153ed77
+	0x7ff6e153baba
+	0x7ff6e14db0ed
+	0x7ff6e14dbf63
+	0x7ff6e19d5d60
+	0x7ff6e19cfe8a
+	0x7ff6e19f1005
+	0x7ff6e171d73e
+	0x7ff6e1724e3f
+	0x7ff6e170b7e4
+	0x7ff6e170b99f
+	0x7ff6e16f1908
+	0x7ffc496fe8d7
+	0x7ffc4adac53c
+
+
+[6/24] Enviando para: Jeriane (554691050735)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554691050735
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Jeriane, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Jeriane, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Jeriane
+
+[7/24] Enviando para: clede (554699809286)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554699809286
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá clede, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá clede, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: clede
+
+[8/24] Enviando para: elis (554699154796)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554699154796
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá elis, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá elis, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: elis
+
+[9/24] Enviando para: edinara (554699088622)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554699088622
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá edinara, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá edinara, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: edinara
+
+[10/24] Enviando para: Flavio (554699726385)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554699726385
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Flavio, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Flavio, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Flavio
+
+[11/24] Enviando para: mari (554699242417)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554699242417
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá mari, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá mari, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: mari
+
+[12/24] Enviando para: VanessaDuarte (551291832909)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=551291832909
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá VanessaDuarte, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá VanessaDuarte, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: VanessaDuarte
+
+[13/24] Enviando para: Jaqueline (554999936437)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554999936437
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Jaqueline, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Jaqueline, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Jaqueline
+
+[14/24] Enviando para: JaisaMiguel (554796028359)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554796028359
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá JaisaMiguel, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá JaisaMiguel, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: JaisaMiguel
+
+[15/24] Enviando para: Julia (551291283748)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=551291283748
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Julia, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Julia, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Julia
+
+[16/24] Enviando para: Cesar (554691125255)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554691125255
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Cesar, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[ERRO] Erro ao enviar texto: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=142.0.7444.135); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e19aa235
+	0x7ff6e1702650
+	0x7ff6e14916dd
+	0x7ff6e14994c8
+	0x7ff6e149c8c2
+	0x7ff6e153ce53
+	0x7ff6e1512b0a
+	0x7ff6e153baba
+	0x7ff6e14db0ed
+	0x7ff6e14dbf63
+	0x7ff6e19d5d60
+	0x7ff6e19cfe8a
+	0x7ff6e19f1005
+	0x7ff6e171d73e
+	0x7ff6e1724e3f
+	0x7ff6e170b7e4
+	0x7ff6e170b99f
+	0x7ff6e16f1908
+	0x7ffc496fe8d7
+	0x7ffc4adac53c
+
+[DEBUG] Traceback: Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 172, in enviar_texto
+    texto_final = driver.execute_script("return arguments[0].innerText || arguments[0].textContent || '';", campo)
+  File "C:\Users\manin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 555, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\manin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=142.0.7444.135); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e19aa235
+	0x7ff6e1702650
+	0x7ff6e14916dd
+	0x7ff6e14994c8
+	0x7ff6e149c8c2
+	0x7ff6e153ce53
+	0x7ff6e1512b0a
+	0x7ff6e153baba
+	0x7ff6e14db0ed
+	0x7ff6e14dbf63
+	0x7ff6e19d5d60
+	0x7ff6e19cfe8a
+	0x7ff6e19f1005
+	0x7ff6e171d73e
+	0x7ff6e1724e3f
+	0x7ff6e170b7e4
+	0x7ff6e170b99f
+	0x7ff6e16f1908
+	0x7ffc496fe8d7
+	0x7ffc4adac53c
+
+
+[FALHA] Falha ao enviar mensagem para: Cesar
+
+[17/24] Enviando para: Fátima (553592012835)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=553592012835
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Fátima, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Fátima, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[ERRO] Erro ao enviar texto: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=142.0.7444.135); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e19aa235
+	0x7ff6e1702650
+	0x7ff6e14916dd
+	0x7ff6e14994c8
+	0x7ff6e149c8c2
+	0x7ff6e153ce53
+	0x7ff6e1512b0a
+	0x7ff6e153baba
+	0x7ff6e14db0ed
+	0x7ff6e14dbf63
+	0x7ff6e19d5d60
+	0x7ff6e19cfe8a
+	0x7ff6e19f1005
+	0x7ff6e171d73e
+	0x7ff6e1724e3f
+	0x7ff6e170b7e4
+	0x7ff6e170b99f
+	0x7ff6e16f1908
+	0x7ffc496fe8d7
+	0x7ffc4adac53c
+
+[DEBUG] Traceback: Traceback (most recent call last):
+  File "C:\Users\manin\Downloads\whatsapp_project\sender.py", line 204, in enviar_texto
+    texto_apos_envio = driver.execute_script("return arguments[0].innerText || arguments[0].textContent || '';", campo)
+  File "C:\Users\manin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 555, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\manin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\webdriver.py", line 458, in execute
+    self.error_handler.check_response(response)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Users\manin\AppData\Roaming\Python\Python313\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.StaleElementReferenceException: Message: stale element reference: stale element not found in the current frame
+  (Session info: chrome=142.0.7444.135); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff6e19aa235
+	0x7ff6e1702650
+	0x7ff6e14916dd
+	0x7ff6e14994c8
+	0x7ff6e149c8c2
+	0x7ff6e153ce53
+	0x7ff6e1512b0a
+	0x7ff6e153baba
+	0x7ff6e14db0ed
+	0x7ff6e14dbf63
+	0x7ff6e19d5d60
+	0x7ff6e19cfe8a
+	0x7ff6e19f1005
+	0x7ff6e171d73e
+	0x7ff6e1724e3f
+	0x7ff6e170b7e4
+	0x7ff6e170b99f
+	0x7ff6e16f1908
+	0x7ffc496fe8d7
+	0x7ffc4adac53c
+
+
+[FALHA] Falha ao enviar mensagem para: Fátima
+
+[18/24] Enviando para: Matheus (553898930603)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=553898930603
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Matheus, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Matheus, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Matheus
+
+[19/24] Enviando para: ClaudineiCordeiro (554699414294)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=554699414294
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá ClaudineiCordeiro, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá ClaudineiCordeiro, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: ClaudineiCordeiro
+
+[20/24] Enviando para: Waguinho (552498493498)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=552498493498
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Waguinho, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Waguinho, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Waguinho
+
+[21/24] Enviando para: Júnior (551291742550)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=551291742550
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Júnior, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Júnior, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Júnior
+
+[22/24] Enviando para: Neyla (559296096677)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=559296096677
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Neyla, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Neyla, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Neyla
+
+[23/24] Enviando para: Maria (551297452365)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=551297452365
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá Maria, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá Maria, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: Maria
+
+[24/24] Enviando para: JeaneRoquete (553898424226)
+[DEBUG] URL: https://web.whatsapp.com/send?phone=553898424226
+[DEBUG] Abrindo URL do WhatsApp...
+[DEBUG] Página carregada, aguardando footer...
+[DEBUG] Footer encontrado, chat aberto!
+[DEBUG] Tentando enviar mensagem: Olá JeaneRoquete, tudo bem?...
+[DEBUG] Campo encontrado com seletor: //div[@contenteditable='true'][@data-tab='10']...
+[DEBUG] Texto digitado com sucesso (método 1)
+[DEBUG] Texto no campo: Olá JeaneRoquete, tudo bem?...
+[DEBUG] Mensagem enviada (método Enter)
+[OK] Mensagem enviada com sucesso!
+[OK] Mensagem enviada para: JeaneRoquete
+
+============================================================
+[CONCLUIDO]
+   Enviados: 21
+   Erros: 3
+   Total: 24
+============================================================
+[LIMPEZA] Removendo perfil temporario...
+[OK] Perfil temporario removido

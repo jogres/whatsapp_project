@@ -1,25 +1,17 @@
-# 🤖 Bot WhatsApp - Sistema Automatizado
+# 🤖 Bot WhatsApp - Envio de Mensagens em Massa
 
-Sistema completo de automação do WhatsApp com envio em massa, transcrição de áudios e análise com IA.
+Sistema simples, eficiente e **portável** para envio de mensagens em massa via WhatsApp Web.
 
 ## 📋 Funcionalidades
 
-1. **Envio em Massa de Mensagens**
-   - Personalização com templates (`{nome}`)
-   - Suporte a links adicionais
-   - Log de mensagens enviadas
-   - Validação de números de telefone
-
-2. **Escuta e Transcrição**
-   - Monitor automático de chats
-   - Transcrição de áudios com Google Speech Recognition
-   - Log de mensagens recebidas
-   - Suporte a múltiplos formatos de áudio
-
-3. **Processamento com IA**
-   - Análise de mensagens com GPT-3.5-turbo
-   - Sugestões para melhorar comunicação
-   - Foco em otimização de vendas
+- ✅ Envio em massa de mensagens personalizadas
+- ✅ Templates com variáveis (`{nome}`)
+- ✅ Suporte a links adicionais
+- ✅ Interface web amigável
+- ✅ Log de mensagens enviadas
+- ✅ Validação de números de telefone
+- ✅ **Sistema portável** - pode ser transportado para outros dispositivos
+- ✅ **Modo portável** - não salva login do WhatsApp (login a cada uso)
 
 ## 🚀 Instalação
 
@@ -33,15 +25,7 @@ Sistema completo de automação do WhatsApp com envio em massa, transcrição de
 pip install -r requirements.txt
 ```
 
-### 3. Configurar variáveis de ambiente
-Crie um arquivo `.env` na raiz do projeto (use `config.env.example` como base):
-
-```env
-OPENAI_API_KEY=sua_chave_aqui
-AI_ENDPOINT=https://api.openai.com/v1/chat/completions
-```
-
-### 4. Preparar arquivo de contatos
+### 3. Preparar arquivo de contatos
 Crie ou edite o arquivo `data/contatos.xlsx` com as colunas:
 - `nome` ou `name`: Nome do contato
 - `telefone`, `phone` ou `numero`: Número do WhatsApp (com código do país)
@@ -54,7 +38,7 @@ Exemplo:
 
 ## 💻 Como Usar
 
-### Método 1: Interface Web (Recomendado)
+### Interface Web (Recomendado)
 
 ```bash
 python main.py
@@ -62,22 +46,41 @@ python main.py
 
 Acesse `http://localhost:8080` no navegador e use a interface gráfica.
 
-### Método 2: Scripts Individuais
+**Recursos da Interface:**
+- Campo de mensagem com template personalizado
+- Campo para link adicional
+- **Switch para modo portável** (desligado = login toda vez, ligado = salva login)
+- Botões para iniciar/parar envio
+- Log em tempo real
 
-#### Enviar mensagens:
+### 🔄 Modo Portável (Padrão)
+
+Por padrão, o sistema está configurado em **modo portável**:
+- ✅ **Não salva o login do WhatsApp** - você precisa fazer login a cada execução
+- ✅ **Perfil temporário** - criado e removido automaticamente
+- ✅ **Totalmente portável** - pode copiar a pasta para outro dispositivo
+- ✅ **Mais seguro** - não deixa rastros de sessão
+
+**Como funciona:**
+1. Ao iniciar o envio, o Chrome abrirá com WhatsApp Web
+2. Escaneie o QR Code com seu celular
+3. O sistema aguardará até 2 minutos para você fazer login
+4. Após o login, o envio começará automaticamente
+5. Ao finalizar, o perfil temporário é removido
+
+### 💾 Modo com Perfil Persistente (Opcional)
+
+Se preferir salvar o login:
+1. Na interface, ative o switch "💾 Usar perfil persistente"
+2. Na primeira execução, faça login normalmente
+3. Nas próximas execuções, o login será mantido
+4. O perfil será salvo em `profile/` (não portável)
+
+### Linha de Comando
+
 ```bash
 # Via variáveis de ambiente
 MSG_TEMPLATE="Olá {nome}, como vai?" MSG_LINK="https://exemplo.com" python sender.py
-```
-
-#### Escutar e transcrever:
-```bash
-python listener_transcriber.py
-```
-
-#### Processar com IA:
-```bash
-python ai_process.py
 ```
 
 ## 📁 Estrutura de Arquivos
@@ -86,50 +89,28 @@ python ai_process.py
 whatsapp_project/
 ├── main.py                    # Interface web (NiceGUI)
 ├── sender.py                  # Script de envio de mensagens
-├── listener_transcriber.py    # Script de escuta e transcrição
-├── ai_process.py              # Script de processamento com IA
 ├── requirements.txt           # Dependências Python
-├── config.env.example         # Exemplo de configuração
+├── README.MD                  # Este arquivo
 ├── data/
 │   ├── contatos.xlsx          # Lista de contatos
 │   ├── sent_log.csv           # Log de mensagens enviadas
-│   ├── received_log.csv       # Log de mensagens recebidas
 │   └── system.log             # Log do sistema
-├── profile/                   # Perfil do Chrome (sessão do WhatsApp)
-└── templates/                 # Templates HTML (legado)
+└── profile/                   # Perfil do Chrome (apenas se usar modo persistente)
 ```
 
-## 🔧 Correções Implementadas
-
-### ✅ Correções de Bugs
-- ✅ Caracteres Unicode invisíveis em argumentos do Chrome corrigidos
-- ✅ Encoding UTF-8 adicionado em todos os arquivos de log
-- ✅ Configuração de download de áudios corrigida
-- ✅ Validação de variáveis de ambiente adicionada
-
-### ✅ Melhorias de Robustez
-- ✅ Tratamento completo de exceções em todos os scripts
-- ✅ Validação de dados de entrada (contatos, templates, arquivos)
-- ✅ Limpeza automática de números de telefone
-- ✅ Mensagens de erro descritivas
-- ✅ Contadores de sucesso/erro
-
-### ✅ Melhorias de Usabilidade
-- ✅ Logs mais informativos com emojis e formatação
-- ✅ Progresso de envio em tempo real
-- ✅ Estatísticas ao final da execução
-- ✅ Timeout de 30s para chamadas de API
-- ✅ Retry automático para conexão com ChromeDriver
+**Nota:** A pasta `profile/` só é criada se você usar o modo com perfil persistente. No modo portável (padrão), um perfil temporário é criado e removido automaticamente.
 
 ## ⚠️ Avisos Importantes
 
-1. **Perfil do WhatsApp**: O primeiro uso requer login manual no WhatsApp Web. A sessão fica salva em `profile/`.
+1. **Login no WhatsApp**: 
+   - **Modo portável (padrão)**: Você precisa fazer login a cada execução escaneando o QR Code. A sessão **não é salva**.
+   - **Modo persistente (opcional)**: O primeiro uso requer login manual, depois a sessão fica salva em `profile/`
 
-2. **Rate Limiting**: O WhatsApp pode bloquear contas que enviam muitas mensagens. Use com moderação.
+2. **Portabilidade**: O sistema usa caminhos relativos, então você pode copiar toda a pasta para outro dispositivo e usar normalmente (no modo portável).
 
-3. **Estrutura HTML**: O WhatsApp atualiza frequentemente sua interface. Os XPaths podem precisar de ajuste.
+3. **Rate Limiting**: O WhatsApp pode bloquear contas que enviam muitas mensagens. Use com moderação e respeite os limites.
 
-4. **API da OpenAI**: Certifique-se de ter créditos na sua conta OpenAI.
+4. **Estrutura HTML**: O WhatsApp atualiza frequentemente sua interface. Os seletores podem precisar de ajuste.
 
 ## 🐛 Solução de Problemas
 
@@ -139,31 +120,26 @@ whatsapp_project/
 # https://chromedriver.chromium.org/downloads
 ```
 
-### Erro de transcrição de áudio
-- Verifique sua conexão com a internet
-- O Google Speech Recognition é gratuito mas tem limites
-
 ### Timeout no WhatsApp Web
 - Aumente os valores de `time.sleep()` se sua conexão for lenta
 - Verifique se o WhatsApp Web está carregando corretamente
 
-### API da OpenAI retorna erro
-- Verifique se a `OPENAI_API_KEY` está correta
-- Confirme que há créditos na conta
-- Verifique o status da API: https://status.openai.com/
+### Mensagens duplicadas
+- O sistema foi configurado para evitar duplicação
+- Se ocorrer, verifique se não há múltiplas instâncias rodando
 
 ## 📝 Logs
 
 Todos os logs são salvos em:
 - `data/system.log` - Log geral do sistema
 - `data/sent_log.csv` - Histórico de mensagens enviadas
-- `data/received_log.csv` - Histórico de mensagens recebidas
 
 ## 🔐 Segurança
 
-- ⚠️ Nunca commite o arquivo `.env` com suas credenciais
-- ⚠️ Mantenha a pasta `profile/` privada (contém sessão do WhatsApp)
+- ⚠️ **Modo portável é mais seguro** - não deixa rastros de sessão do WhatsApp
+- ⚠️ Se usar modo persistente, mantenha a pasta `profile/` privada (contém sessão do WhatsApp)
 - ⚠️ Use com responsabilidade e respeite a privacidade dos contatos
+- ⚠️ Não compartilhe a pasta `profile/` com outras pessoas
 
 ## 📜 Licença
 
@@ -172,4 +148,3 @@ Projeto para uso pessoal. Use com responsabilidade.
 ---
 
 **Desenvolvido com ❤️ usando Python, Selenium e NiceGUI**
-
