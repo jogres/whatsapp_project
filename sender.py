@@ -17,6 +17,7 @@ import time
 import tempfile
 import shutil
 import pandas as pd
+from urllib.parse import quote
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
@@ -92,10 +93,11 @@ print("[OK] Continuando com os envios...")
 # Função para enviar mensagem de texto
 def enviar_texto(driver, wait, texto):
     """
-    Envia uma mensagem de texto no WhatsApp Web usando múltiplos métodos.
+    Envia uma mensagem de texto no WhatsApp Web.
+    Verifica se a mensagem foi preenchida, aguarda 5 segundos e pressiona Enter.
     """
     try:
-        print(f"[DEBUG] Tentando enviar mensagem: {texto[:50]}...")
+        print(f"[DEBUG] Verificando mensagem pré-preenchida: {texto[:50]}...")
         
         # Múltiplos seletores para o campo de mensagem
         seletores = [
@@ -124,90 +126,52 @@ def enviar_texto(driver, wait, texto):
         driver.execute_script("arguments[0].scrollIntoView(true);", campo)
         time.sleep(0.5)
         
-        # Clicar no campo
+        # Aguardar para o WhatsApp pré-preencher pela URL
+        print("[DEBUG] Aguardando mensagem ser preenchida...")
+        time.sleep(3)
+        
+        # Verificar se o texto foi preenchido (pela URL ou manualmente)
+        texto_esperado = texto.strip()
+        texto_no_campo = driver.execute_script("return arguments[0].innerText || arguments[0].textContent || '';", campo)
+        texto_obtido = texto_no_campo.strip()
+        
+        # Verificar se o texto está presente (100% ou pelo menos 95%)
+        texto_preenchido = False
+        if texto_obtido == texto_esperado:
+            print(f"[DEBUG] Texto preenchido corretamente (100%) - {len(texto_obtido)} caracteres")
+            texto_preenchido = True
+        elif len(texto_obtido) > 0 and len(texto_obtido) >= len(texto_esperado) * 0.95 and texto_esperado in texto_obtido:
+            print(f"[DEBUG] Texto preenchido (aproximadamente {len(texto_obtido)} caracteres)")
+            texto_preenchido = True
+        
+        if not texto_preenchido:
+            print(f"[AVISO] Texto pode não estar completamente preenchido (esperado: {len(texto_esperado)}, obtido: {len(texto_obtido)})")
+            print(f"[AVISO] Continuando mesmo assim...")
+        
+        # Focar no campo
         try:
             campo.click()
         except:
             driver.execute_script("arguments[0].click();", campo)
         time.sleep(0.5)
         
-        # Limpar campo completamente usando JavaScript
-        driver.execute_script("""
-            var campo = arguments[0];
-            campo.innerText = '';
-            campo.textContent = '';
-            campo.innerHTML = '';
-        """, campo)
-        time.sleep(0.3)
+        print(f"[DEBUG] Aguardando 5 segundos antes de enviar...")
+        # Aguardar 10 segundos após a mensagem ter sido preenchida
+        time.sleep(5)
         
-        # Método 1: Usar send_keys diretamente
-        try:
-            campo.send_keys(texto)
-            time.sleep(0.5)
-            
-            # Verificar se o texto foi digitado
-            texto_digitado = driver.execute_script("return arguments[0].innerText || arguments[0].textContent || '';", campo)
-            if texto_digitado.strip() == texto.strip():
-                print("[DEBUG] Texto digitado com sucesso (método 1)")
-            else:
-                # Método 2: Usar JavaScript para inserir texto
-                print("[DEBUG] Tentando método alternativo (JavaScript)...")
-                driver.execute_script("arguments[0].innerText = arguments[1];", campo, texto)
-                time.sleep(0.5)
-        except Exception as e:
-            print(f"[DEBUG] Método 1 falhou, tentando JavaScript: {str(e)}")
-            # Método 2: Inserir via JavaScript
-            driver.execute_script("arguments[0].innerText = arguments[1];", campo, texto)
-            time.sleep(0.5)
-        
-        # Disparar evento de input para garantir que o WhatsApp detecte
-        driver.execute_script("""
-            var campo = arguments[0];
-            var evento = new Event('input', { bubbles: true });
-            campo.dispatchEvent(evento);
-        """, campo)
-        time.sleep(0.5)
-        
-        # Verificar se o texto está no campo antes de enviar
-        texto_final = driver.execute_script("return arguments[0].innerText || arguments[0].textContent || '';", campo)
-        if not texto_final.strip():
-            print("[ERRO] Campo está vazio após tentar digitar")
-            return False
-        
-        print(f"[DEBUG] Texto no campo: {texto_final[:50]}...")
-        
-        # Enviar mensagem - tentar múltiplos métodos
-        try:
-            # Método 1: Enter direto
-            campo.send_keys(Keys.ENTER)
-            time.sleep(1)
-            print("[DEBUG] Mensagem enviada (método Enter)")
-        except:
-            try:
-                # Método 2: ActionChains
-                webdriver.ActionChains(driver).send_keys(Keys.ENTER).perform()
-                time.sleep(1)
-                print("[DEBUG] Mensagem enviada (método ActionChains)")
-            except:
-                # Método 3: JavaScript para clicar no botão de enviar
-                try:
-                    botao_enviar = driver.find_element(By.XPATH, "//span[@data-icon='send']")
-                    botao_enviar.click()
-                    time.sleep(1)
-                    print("[DEBUG] Mensagem enviada (método botão)")
-                except:
-                    print("[ERRO] Não foi possível enviar a mensagem")
-                    return False
+        print(f"[DEBUG] Pressionando Enter para enviar...")
+        # Simplesmente pressionar Enter no teclado
+        campo.send_keys(Keys.ENTER)
+        time.sleep(2)
         
         # Verificar se a mensagem foi enviada (campo deve estar vazio)
-        time.sleep(1)
         texto_apos_envio = driver.execute_script("return arguments[0].innerText || arguments[0].textContent || '';", campo)
         if not texto_apos_envio.strip():
             print("[OK] Mensagem enviada com sucesso!")
             return True
         else:
-            print(f"[AVISO] Campo ainda contém texto: {texto_apos_envio[:50]}...")
-            return True  # Retornar True mesmo assim, pode ter sido enviado
+            print(f"[AVISO] Campo ainda contém texto, mas Enter foi pressionado")
+            return True  # Retornar True mesmo assim
         
     except Exception as e:
         print(f"[ERRO] Erro ao enviar texto: {str(e)}")
@@ -279,8 +243,9 @@ for idx, row in df.iterrows():
     if link:
         msg += f" Confira: {link}"
 
-    # URL sem texto - sempre preencher manualmente para evitar duplicação
-    url = f"https://web.whatsapp.com/send?phone={numero}"
+    # URL com texto - mensagem pré-preenchida pela URL (método original)
+    msg_encoded = quote(msg)
+    url = f"https://web.whatsapp.com/send?phone={numero}&text={msg_encoded}"
     
     print(f"\n[{idx+1}/{len(df)}] Enviando para: {nome} ({numero})")
     print(f"[DEBUG] URL: {url}")
